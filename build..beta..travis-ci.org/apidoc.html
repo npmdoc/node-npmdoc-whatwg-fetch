@@ -1,0 +1,1228 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/github/fetch#readme"
+
+    >whatwg-fetch (v2.0.3)</a>
+</h1>
+<h4>A window.fetch polyfill.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch">module whatwg-fetch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>Headers
+            <span class="apidocSignatureSpan">(headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Request">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>Request
+            <span class="apidocSignatureSpan">(input, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>Response
+            <span class="apidocSignatureSpan">(bodyInit, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.fetch">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>fetch
+            <span class="apidocSignatureSpan">(input, init)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">whatwg-fetch.</span>Headers.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">whatwg-fetch.</span>Request.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">whatwg-fetch.</span>Response.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch.Headers">module whatwg-fetch.Headers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.Headers">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>Headers
+            <span class="apidocSignatureSpan">(headers)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch.Headers.prototype">module whatwg-fetch.Headers.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.append">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>append
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.delete">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>delete
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.entries">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>entries
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.forEach">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(callback, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.get">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>get
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.has">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>has
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.keys">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>keys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.set">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>set
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Headers.prototype.values">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>values
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch.Request">module whatwg-fetch.Request</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Request.Request">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>Request
+            <span class="apidocSignatureSpan">(input, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch.Request.prototype">module whatwg-fetch.Request.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>bodyUsed</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Request.prototype._initBody">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>_initBody
+            <span class="apidocSignatureSpan">(body)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Request.prototype.clone">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>clone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Request.prototype.json">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>json
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Request.prototype.text">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>text
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch.Response">module whatwg-fetch.Response</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.Response">
+            function <span class="apidocSignatureSpan">whatwg-fetch.</span>Response
+            <span class="apidocSignatureSpan">(bodyInit, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.error">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Response.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.redirect">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Response.</span>redirect
+            <span class="apidocSignatureSpan">(url, status)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.whatwg-fetch.Response.prototype">module whatwg-fetch.Response.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>bodyUsed</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.prototype._initBody">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>_initBody
+            <span class="apidocSignatureSpan">(body)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.prototype.clone">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>clone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.prototype.json">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>json
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.whatwg-fetch.Response.prototype.text">
+            function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>text
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch" id="apidoc.module.whatwg-fetch">module whatwg-fetch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers" id="apidoc.element.whatwg-fetch.Headers">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>Headers
+        <span class="apidocSignatureSpan">(headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Headers(headers) {
+  this.map = {}
+
+  if (headers instanceof Headers) {
+    headers.forEach(function(value, name) {
+      this.append(name, value)
+    }, this)
+  } else if (Array.isArray(headers)) {
+    headers.forEach(function(header) {
+      this.append(header[0], header[1])
+    }, this)
+  } else if (headers) {
+    Object.getOwnPropertyNames(headers).forEach(function(name) {
+      this.append(name, headers[name])
+    }, this)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Request" id="apidoc.element.whatwg-fetch.Request">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>Request
+        <span class="apidocSignatureSpan">(input, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Request(input, options) {
+  options = options || {}
+  var body = options.body
+
+  if (input instanceof Request) {
+    if (input.bodyUsed) {
+      throw new TypeError(&#x27;Already read&#x27;)
+    }
+    this.url = input.url
+    this.credentials = input.credentials
+    if (!options.headers) {
+      this.headers = new Headers(input.headers)
+    }
+    this.method = input.method
+    this.mode = input.mode
+    if (!body &#x26;&#x26; input._bodyInit != null) {
+      body = input._bodyInit
+      input.bodyUsed = true
+    }
+  } else {
+    this.url = String(input)
+  }
+
+  this.credentials = options.credentials || this.credentials || &#x27;omit&#x27;
+  if (options.headers || !this.headers) {
+    this.headers = new Headers(options.headers)
+  }
+  this.method = normalizeMethod(options.method || this.method || &#x27;GET&#x27;)
+  this.mode = options.mode || this.mode || null
+  this.referrer = null
+
+  if ((this.method === &#x27;GET&#x27; || this.method === &#x27;HEAD&#x27;) &#x26;&#x26; body) {
+    throw new TypeError(&#x27;Body not allowed for GET or HEAD requests&#x27;)
+  }
+  this._initBody(body)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response" id="apidoc.element.whatwg-fetch.Response">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>Response
+        <span class="apidocSignatureSpan">(bodyInit, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Response(bodyInit, options) {
+  if (!options) {
+    options = {}
+  }
+
+  this.type = &#x27;default&#x27;
+  this.status = &#x27;status&#x27; in options ? options.status : 200
+  this.ok = this.status &#x3e;= 200 &#x26;&#x26; this.status &#x3c; 300
+  this.statusText = &#x27;statusText&#x27; in options ? options.statusText : &#x27;OK&#x27;
+  this.headers = new Headers(options.headers)
+  this.url = options.url || &#x27;&#x27;
+  this._initBody(bodyInit)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.fetch" id="apidoc.element.whatwg-fetch.fetch">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>fetch
+        <span class="apidocSignatureSpan">(input, init)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (input, init) {
+  return new Promise(function(resolve, reject) {
+    var request = new Request(input, init)
+    var xhr = new XMLHttpRequest()
+
+    xhr.onload = function() {
+      var options = {
+        status: xhr.status,
+        statusText: xhr.statusText,
+        headers: parseHeaders(xhr.getAllResponseHeaders() || &#x27;&#x27;)
+      }
+      options.url = &#x27;responseURL&#x27; in xhr ? xhr.responseURL : options.headers.get(&#x27;X-Request-URL&#x27;)
+      var body = &#x27;response&#x27; in xhr ? xhr.response : xhr.responseText
+      resolve(new Response(body, options))
+    }
+
+    xhr.onerror = function() {
+      reject(new TypeError(&#x27;Network request failed&#x27;))
+    }
+
+    xhr.ontimeout = function() {
+      reject(new TypeError(&#x27;Network request failed&#x27;))
+    }
+
+    xhr.open(request.method, request.url, true)
+
+    if (request.credentials === &#x27;include&#x27;) {
+      xhr.withCredentials = true
+    }
+
+    if (&#x27;responseType&#x27; in xhr &#x26;&#x26; support.blob) {
+      xhr.responseType = &#x27;blob&#x27;
+    }
+
+    request.headers.forEach(function(value, name) {
+      xhr.setRequestHeader(name, value)
+    })
+
+    xhr.send(typeof request._bodyInit === &#x27;undefined&#x27; ? null : request._bodyInit)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch.Headers" id="apidoc.module.whatwg-fetch.Headers">module whatwg-fetch.Headers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.Headers" id="apidoc.element.whatwg-fetch.Headers.Headers">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>Headers
+        <span class="apidocSignatureSpan">(headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Headers(headers) {
+  this.map = {}
+
+  if (headers instanceof Headers) {
+    headers.forEach(function(value, name) {
+      this.append(name, value)
+    }, this)
+  } else if (Array.isArray(headers)) {
+    headers.forEach(function(header) {
+      this.append(header[0], header[1])
+    }, this)
+  } else if (headers) {
+    Object.getOwnPropertyNames(headers).forEach(function(name) {
+      this.append(name, headers[name])
+    }, this)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch.Headers.prototype" id="apidoc.module.whatwg-fetch.Headers.prototype">module whatwg-fetch.Headers.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.append" id="apidoc.element.whatwg-fetch.Headers.prototype.append">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>append
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">append = function (name, value) {
+  name = normalizeName(name)
+  value = normalizeValue(value)
+  var oldValue = this.map[name]
+  this.map[name] = oldValue ? oldValue+&#x27;,&#x27;+value : value
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### File upload
+
+```javascript
+var input = document.querySelector(&#x27;input[type=&#x22;file&#x22;]&#x27;)
+
+var data = new FormData()
+data.<span class="apidocCodeKeywordSpan">append</span>(&#x27;file&#x27;, input.files[0])
+data.append(&#x27;user&#x27;, &#x27;hubot&#x27;)
+
+fetch(&#x27;/avatars&#x27;, {
+  method: &#x27;POST&#x27;,
+  body: data
+})
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.delete" id="apidoc.element.whatwg-fetch.Headers.prototype.delete">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>delete
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (name) {
+  delete this.map[normalizeName(name)]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.entries" id="apidoc.element.whatwg-fetch.Headers.prototype.entries">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>entries
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">entries = function () {
+  var items = []
+  this.forEach(function(value, name) { items.push([name, value]) })
+  return iteratorFor(items)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.forEach" id="apidoc.element.whatwg-fetch.Headers.prototype.forEach">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(callback, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (callback, thisArg) {
+  for (var name in this.map) {
+    if (this.map.hasOwnProperty(name)) {
+      callback.call(thisArg, this.map[name], name, this)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return iterator
+  }
+
+  function Headers(headers) {
+this.map = {}
+
+if (headers instanceof Headers) {
+  headers.<span class="apidocCodeKeywordSpan">forEach</span>(function(value, name) {
+    this.append(name, value)
+  }, this)
+} else if (Array.isArray(headers)) {
+  headers.forEach(function(header) {
+    this.append(header[0], header[1])
+  }, this)
+} else if (headers) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.get" id="apidoc.element.whatwg-fetch.Headers.prototype.get">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>get
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (name) {
+  name = normalizeName(name)
+  return this.has(name) ? this.map[name] : null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  })
+```
+
+### Response metadata
+
+```javascript
+fetch(&#x27;/users.json&#x27;).then(function(response) {
+  console.log(response.headers.<span class="apidocCodeKeywordSpan">get</span>(&#x27;Content-Type&#x27;))
+  console.log(response.headers.get(&#x27;Date&#x27;))
+  console.log(response.status)
+  console.log(response.statusText)
+})
+```
+
+### Post form
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.has" id="apidoc.element.whatwg-fetch.Headers.prototype.has">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>has
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has = function (name) {
+  return this.map.hasOwnProperty(normalizeName(name))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Headers.prototype[&#x27;delete&#x27;] = function(name) {
+  delete this.map[normalizeName(name)]
+}
+
+Headers.prototype.get = function(name) {
+  name = normalizeName(name)
+  return this.<span class="apidocCodeKeywordSpan">has</span>(name) ? this.map[name] : null
+}
+
+Headers.prototype.has = function(name) {
+  return this.map.hasOwnProperty(normalizeName(name))
+}
+
+Headers.prototype.set = function(name, value) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.keys" id="apidoc.element.whatwg-fetch.Headers.prototype.keys">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>keys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keys = function () {
+  var items = []
+  this.forEach(function(value, name) { items.push(name) })
+  return iteratorFor(items)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.set" id="apidoc.element.whatwg-fetch.Headers.prototype.set">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>set
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (name, value) {
+  this.map[normalizeName(name)] = normalizeValue(value)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function bufferClone(buf) {
+  if (buf.slice) {
+    return buf.slice(0)
+  } else {
+    var view = new Uint8Array(buf.byteLength)
+    view.<span class="apidocCodeKeywordSpan">set</span>(new Uint8Array(buf))
+    return view.buffer
+  }
+}
+
+function Body() {
+  this.bodyUsed = false
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Headers.prototype.values" id="apidoc.element.whatwg-fetch.Headers.prototype.values">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Headers.prototype.</span>values
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">values = function () {
+  var items = []
+  this.forEach(function(value) { items.push(value) })
+  return iteratorFor(items)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch.Request" id="apidoc.module.whatwg-fetch.Request">module whatwg-fetch.Request</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Request.Request" id="apidoc.element.whatwg-fetch.Request.Request">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>Request
+        <span class="apidocSignatureSpan">(input, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Request(input, options) {
+  options = options || {}
+  var body = options.body
+
+  if (input instanceof Request) {
+    if (input.bodyUsed) {
+      throw new TypeError(&#x27;Already read&#x27;)
+    }
+    this.url = input.url
+    this.credentials = input.credentials
+    if (!options.headers) {
+      this.headers = new Headers(input.headers)
+    }
+    this.method = input.method
+    this.mode = input.mode
+    if (!body &#x26;&#x26; input._bodyInit != null) {
+      body = input._bodyInit
+      input.bodyUsed = true
+    }
+  } else {
+    this.url = String(input)
+  }
+
+  this.credentials = options.credentials || this.credentials || &#x27;omit&#x27;
+  if (options.headers || !this.headers) {
+    this.headers = new Headers(options.headers)
+  }
+  this.method = normalizeMethod(options.method || this.method || &#x27;GET&#x27;)
+  this.mode = options.mode || this.mode || null
+  this.referrer = null
+
+  if ((this.method === &#x27;GET&#x27; || this.method === &#x27;HEAD&#x27;) &#x26;&#x26; body) {
+    throw new TypeError(&#x27;Body not allowed for GET or HEAD requests&#x27;)
+  }
+  this._initBody(body)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch.Request.prototype" id="apidoc.module.whatwg-fetch.Request.prototype">module whatwg-fetch.Request.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Request.prototype._initBody" id="apidoc.element.whatwg-fetch.Request.prototype._initBody">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>_initBody
+        <span class="apidocSignatureSpan">(body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initBody = function (body) {
+  this._bodyInit = body
+  if (!body) {
+    this._bodyText = &#x27;&#x27;
+  } else if (typeof body === &#x27;string&#x27;) {
+    this._bodyText = body
+  } else if (support.blob &#x26;&#x26; Blob.prototype.isPrototypeOf(body)) {
+    this._bodyBlob = body
+  } else if (support.formData &#x26;&#x26; FormData.prototype.isPrototypeOf(body)) {
+    this._bodyFormData = body
+  } else if (support.searchParams &#x26;&#x26; URLSearchParams.prototype.isPrototypeOf(body)) {
+    this._bodyText = body.toString()
+  } else if (support.arrayBuffer &#x26;&#x26; support.blob &#x26;&#x26; isDataView(body)) {
+    this._bodyArrayBuffer = bufferClone(body.buffer)
+    // IE 10-11 can&#x27;t handle a DataView body.
+    this._bodyInit = new Blob([this._bodyArrayBuffer])
+  } else if (support.arrayBuffer &#x26;&#x26; (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) {
+    this._bodyArrayBuffer = bufferClone(body)
+  } else {
+    throw new Error(&#x27;unsupported BodyInit type&#x27;)
+  }
+
+  if (!this.headers.get(&#x27;content-type&#x27;)) {
+    if (typeof body === &#x27;string&#x27;) {
+      this.headers.set(&#x27;content-type&#x27;, &#x27;text/plain;charset=UTF-8&#x27;)
+    } else if (this._bodyBlob &#x26;&#x26; this._bodyBlob.type) {
+      this.headers.set(&#x27;content-type&#x27;, this._bodyBlob.type)
+    } else if (support.searchParams &#x26;&#x26; URLSearchParams.prototype.isPrototypeOf(body)) {
+      this.headers.set(&#x27;content-type&#x27;, &#x27;application/x-www-form-urlencoded;charset=UTF-8&#x27;)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.method = normalizeMethod(options.method || this.method || &#x27;GET&#x27;)
+  this.mode = options.mode || this.mode || null
+  this.referrer = null
+
+  if ((this.method === &#x27;GET&#x27; || this.method === &#x27;HEAD&#x27;) &#x26;&#x26; body) {
+    throw new TypeError(&#x27;Body not allowed for GET or HEAD requests&#x27;)
+  }
+  this.<span class="apidocCodeKeywordSpan">_initBody</span>(body)
+}
+
+Request.prototype.clone = function() {
+  return new Request(this, { body: this._bodyInit })
+}
+
+function decode(body) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Request.prototype.clone" id="apidoc.element.whatwg-fetch.Request.prototype.clone">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>clone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function () {
+  return new Request(this, { body: this._bodyInit })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Request.prototype.json" id="apidoc.element.whatwg-fetch.Request.prototype.json">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>json
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json = function () {
+  return this.text().then(JSON.parse)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### JSON
+
+```javascript
+fetch(&#x27;/users.json&#x27;)
+  .then(function(response) {
+    return response.<span class="apidocCodeKeywordSpan">json</span>()
+  }).then(function(json) {
+    console.log(&#x27;parsed json&#x27;, json)
+  }).catch(function(ex) {
+    console.log(&#x27;parsing failed&#x27;, ex)
+  })
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Request.prototype.text" id="apidoc.element.whatwg-fetch.Request.prototype.text">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Request.prototype.</span>text
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function () {
+  var rejected = consumed(this)
+  if (rejected) {
+    return rejected
+  }
+
+  if (this._bodyBlob) {
+    return readBlobAsText(this._bodyBlob)
+  } else if (this._bodyArrayBuffer) {
+    return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer))
+  } else if (this._bodyFormData) {
+    throw new Error(&#x27;could not read FormData body as text&#x27;)
+  } else {
+    return Promise.resolve(this._bodyText)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+https://github.github.io/fetch/.
+
+### HTML
+
+```javascript
+fetch(&#x27;/users.html&#x27;)
+  .then(function(response) {
+    return response.<span class="apidocCodeKeywordSpan">text</span>()
+  }).then(function(body) {
+    document.body.innerHTML = body
+  })
+```
+
+### JSON
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch.Response" id="apidoc.module.whatwg-fetch.Response">module whatwg-fetch.Response</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.Response" id="apidoc.element.whatwg-fetch.Response.Response">
+        function <span class="apidocSignatureSpan">whatwg-fetch.</span>Response
+        <span class="apidocSignatureSpan">(bodyInit, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Response(bodyInit, options) {
+  if (!options) {
+    options = {}
+  }
+
+  this.type = &#x27;default&#x27;
+  this.status = &#x27;status&#x27; in options ? options.status : 200
+  this.ok = this.status &#x3e;= 200 &#x26;&#x26; this.status &#x3c; 300
+  this.statusText = &#x27;statusText&#x27; in options ? options.statusText : &#x27;OK&#x27;
+  this.headers = new Headers(options.headers)
+  this.url = options.url || &#x27;&#x27;
+  this._initBody(bodyInit)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.error" id="apidoc.element.whatwg-fetch.Response.error">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Response.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function () {
+  var response = new Response(null, {status: 0, statusText: &#x27;&#x27;})
+  response.type = &#x27;error&#x27;
+  return response
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.redirect" id="apidoc.element.whatwg-fetch.Response.redirect">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Response.</span>redirect
+        <span class="apidocSignatureSpan">(url, status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">redirect = function (url, status) {
+  if (redirectStatuses.indexOf(status) === -1) {
+    throw new RangeError(&#x27;Invalid status code&#x27;)
+  }
+
+  return new Response(null, {status: status, headers: {location: url}})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.whatwg-fetch.Response.prototype" id="apidoc.module.whatwg-fetch.Response.prototype">module whatwg-fetch.Response.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.prototype._initBody" id="apidoc.element.whatwg-fetch.Response.prototype._initBody">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>_initBody
+        <span class="apidocSignatureSpan">(body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initBody = function (body) {
+  this._bodyInit = body
+  if (!body) {
+    this._bodyText = &#x27;&#x27;
+  } else if (typeof body === &#x27;string&#x27;) {
+    this._bodyText = body
+  } else if (support.blob &#x26;&#x26; Blob.prototype.isPrototypeOf(body)) {
+    this._bodyBlob = body
+  } else if (support.formData &#x26;&#x26; FormData.prototype.isPrototypeOf(body)) {
+    this._bodyFormData = body
+  } else if (support.searchParams &#x26;&#x26; URLSearchParams.prototype.isPrototypeOf(body)) {
+    this._bodyText = body.toString()
+  } else if (support.arrayBuffer &#x26;&#x26; support.blob &#x26;&#x26; isDataView(body)) {
+    this._bodyArrayBuffer = bufferClone(body.buffer)
+    // IE 10-11 can&#x27;t handle a DataView body.
+    this._bodyInit = new Blob([this._bodyArrayBuffer])
+  } else if (support.arrayBuffer &#x26;&#x26; (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) {
+    this._bodyArrayBuffer = bufferClone(body)
+  } else {
+    throw new Error(&#x27;unsupported BodyInit type&#x27;)
+  }
+
+  if (!this.headers.get(&#x27;content-type&#x27;)) {
+    if (typeof body === &#x27;string&#x27;) {
+      this.headers.set(&#x27;content-type&#x27;, &#x27;text/plain;charset=UTF-8&#x27;)
+    } else if (this._bodyBlob &#x26;&#x26; this._bodyBlob.type) {
+      this.headers.set(&#x27;content-type&#x27;, this._bodyBlob.type)
+    } else if (support.searchParams &#x26;&#x26; URLSearchParams.prototype.isPrototypeOf(body)) {
+      this.headers.set(&#x27;content-type&#x27;, &#x27;application/x-www-form-urlencoded;charset=UTF-8&#x27;)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.method = normalizeMethod(options.method || this.method || &#x27;GET&#x27;)
+  this.mode = options.mode || this.mode || null
+  this.referrer = null
+
+  if ((this.method === &#x27;GET&#x27; || this.method === &#x27;HEAD&#x27;) &#x26;&#x26; body) {
+    throw new TypeError(&#x27;Body not allowed for GET or HEAD requests&#x27;)
+  }
+  this.<span class="apidocCodeKeywordSpan">_initBody</span>(body)
+}
+
+Request.prototype.clone = function() {
+  return new Request(this, { body: this._bodyInit })
+}
+
+function decode(body) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.prototype.clone" id="apidoc.element.whatwg-fetch.Response.prototype.clone">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>clone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function () {
+  return new Response(this._bodyInit, {
+    status: this.status,
+    statusText: this.statusText,
+    headers: new Headers(this.headers),
+    url: this.url
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.prototype.json" id="apidoc.element.whatwg-fetch.Response.prototype.json">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>json
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json = function () {
+  return this.text().then(JSON.parse)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### JSON
+
+```javascript
+fetch(&#x27;/users.json&#x27;)
+  .then(function(response) {
+    return response.<span class="apidocCodeKeywordSpan">json</span>()
+  }).then(function(json) {
+    console.log(&#x27;parsed json&#x27;, json)
+  }).catch(function(ex) {
+    console.log(&#x27;parsing failed&#x27;, ex)
+  })
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.whatwg-fetch.Response.prototype.text" id="apidoc.element.whatwg-fetch.Response.prototype.text">
+        function <span class="apidocSignatureSpan">whatwg-fetch.Response.prototype.</span>text
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function () {
+  var rejected = consumed(this)
+  if (rejected) {
+    return rejected
+  }
+
+  if (this._bodyBlob) {
+    return readBlobAsText(this._bodyBlob)
+  } else if (this._bodyArrayBuffer) {
+    return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer))
+  } else if (this._bodyFormData) {
+    throw new Error(&#x27;could not read FormData body as text&#x27;)
+  } else {
+    return Promise.resolve(this._bodyText)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+https://github.github.io/fetch/.
+
+### HTML
+
+```javascript
+fetch(&#x27;/users.html&#x27;)
+  .then(function(response) {
+    return response.<span class="apidocCodeKeywordSpan">text</span>()
+  }).then(function(body) {
+    document.body.innerHTML = body
+  })
+```
+
+### JSON
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
